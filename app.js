@@ -9,7 +9,7 @@ let personRoute = require('./src/router/person')
 let customerRoute = require('./src/router/customer')
 
 const db = require('./config/keys').mongoURI
-mongoose.connect(db, { useNewUrlParser: true })
+mongoose.connect(db,{ useNewUrlParser: true , useUnifiedTopology: true })
     .then(() => console.log("mongoose Conected"))
     .catch(err => console.log(err))
 
